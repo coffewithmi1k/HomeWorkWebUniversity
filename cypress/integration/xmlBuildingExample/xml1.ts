@@ -2,8 +2,8 @@
 
 describe('xml test', () => {
     const serializer = new XMLSerializer();
-    const readXml = 'C:/Corgi/JS course/TestingProjects/HomeWorkWebUniversity/cypress/fixtures/xmlEx.xml';
-    const writeXml = 'C:/Corgi/JS course/TestingProjects/HomeWorkWebUniversity/cypress/fixtures/xmlEx2.xml'
+    const readXml = 'cypress/fixtures/xmlEx.xml';
+    const writeXml = 'cypress/fixtures/xmlEx2.xml'
     const parser = new DOMParser();
 
     it('tests xml', () => {
