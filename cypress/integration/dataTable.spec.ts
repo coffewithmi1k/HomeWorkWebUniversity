@@ -14,4 +14,18 @@ describe('Data table specs: ', () => {
       .clear()
       .type('Random text');
   });
-});
+
+  it('transforms table into arrya o objects', () => {
+    cy.get('#t01 > tbody > tr:not(:first-child)')
+    .then((data) => {
+      console.log(data);
+      data.map(function()  {
+        const tds = this.querySelectorAll('td');
+        
+        console.log(this.querySelectorAll('td'));
+      })
+      //const dataTrs = [...data];
+     // console.log(dataTrs);
+      })
+    })
+  });
