@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'lebowski25kurt/webdriverio:latest'
+            image 'node14.17.6-slim-chrome100-ff99-edge'
             args '-p 3000:3000'
         }
     }
