@@ -1,4 +1,6 @@
 describe('Data table specs: ', () => {
+  const columns = ['FirstName', 'LastName', 'Age'];
+
   beforeEach(() => {
     cy.visit('Data-Table/');
   });
@@ -15,17 +17,13 @@ describe('Data table specs: ', () => {
       .type('Random text');
   });
 
-  it('transforms table into arrya o objects', () => {
+  it.only('transforms table into arrya o objects', () => {
     cy.get('#t01 > tbody > tr:not(:first-child)')
-    .then((data) => {
-      console.log(data);
-      data.map(function()  {
-        const tds = this.querySelectorAll('td');
-        
-        console.log(this.querySelectorAll('td'));
+    .then((trs) => {
+      const tds = trs.map((tr) => {
+        console.log(tr);
       })
-      //const dataTrs = [...data];
-     // console.log(dataTrs);
-      })
+      //console.log(trs);
+    });
     })
   });
